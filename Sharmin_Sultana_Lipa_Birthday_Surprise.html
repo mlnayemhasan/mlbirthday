@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ff4f9a">
+<title>Sharmin Sultana Lipa — Birthday Surprise 💖</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body{min-height:100vh;overflow:hidden;color:#5b2348;display:flex;align-items:center;justify-content:center;padding:18px;
+background:radial-gradient(circle at 15% 15%,#fff 0 7%,transparent 25%),radial-gradient(circle at 85% 80%,#ffe2ef 0 8%,transparent 28%),linear-gradient(135deg,#ffd4e7,#ead8ff 48%,#fff0c9)}
+.bg span{position:fixed;display:block;pointer-events:none;opacity:.65;animation:drift linear infinite}
+.bg span:nth-child(1){left:7%;font-size:24px;animation-duration:9s}.bg span:nth-child(2){left:23%;font-size:18px;animation-duration:12s;animation-delay:2s}.bg span:nth-child(3){left:48%;font-size:27px;animation-duration:10s;animation-delay:1s}.bg span:nth-child(4){left:72%;font-size:21px;animation-duration:13s}.bg span:nth-child(5){left:90%;font-size:25px;animation-duration:8s;animation-delay:3s}
+@keyframes drift{from{transform:translateY(110vh) rotate(0);opacity:0}15%{opacity:.7}to{transform:translateY(-20vh) rotate(360deg);opacity:0}}
+.card{width:min(94vw,560px);max-height:94vh;overflow:auto;position:relative;z-index:2;padding:30px 24px;border:1px solid #ffffffaa;border-radius:34px;text-align:center;background:#ffffffd9;box-shadow:0 25px 80px #7f3d6728;backdrop-filter:blur(16px)}
+.logo{width:82px;height:82px;margin:0 auto 12px;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#ff4f9a,#8f5cff);box-shadow:0 12px 30px #a34b9c40;color:#fff;font-size:30px;font-weight:900;letter-spacing:-2px;border:3px solid #fff;animation:pulse 2.2s ease-in-out infinite}
+.logo small{display:block;font-size:10px;letter-spacing:2px;opacity:.9;margin-top:-2px}
+@keyframes pulse{50%{transform:translateY(-4px) scale(1.04);box-shadow:0 18px 38px #a34b9c55}}
+.badge{display:inline-block;padding:7px 14px;border-radius:999px;background:#fff0f7;color:#d83d86;font-size:13px;font-weight:800}
+h1{font-size:clamp(32px,8vw,48px);margin:14px 0 8px;line-height:1.1}.name{font-size:clamp(23px,6vw,31px);font-weight:900;background:linear-gradient(90deg,#e23f8b,#8b58e8);-webkit-background-clip:text;color:transparent}
+.msg{font-size:17px;line-height:1.8;margin:14px auto;max-width:470px}
+button{border:0;border-radius:999px;padding:15px 28px;font-size:17px;font-weight:850;color:#fff;background:linear-gradient(100deg,#ff4f9a,#9859e9);cursor:pointer;box-shadow:0 10px 28px #b04e9a44;transition:.25s}
+button:active{transform:scale(.96)}.hidden{display:none!important}.cake{font-size:78px;animation:bounce 1.4s infinite}
+@keyframes bounce{50%{transform:translateY(-10px) rotate(-2deg)}}.divider{height:1px;background:linear-gradient(90deg,transparent,#e8a9ca,transparent);margin:22px 0}
+.wishes{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.wishbox{padding:13px 8px;border-radius:18px;background:#fff7fb;border:1px solid #ffd3e7;font-size:14px}.wishbox b{display:block;font-size:20px;margin-bottom:4px}
+.quote{font-style:italic;font-size:15px;color:#7a4965}.footer{font-size:12px;opacity:.65;margin-top:20px}#surprise{animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:translateY(15px) scale(.98)}to{opacity:1;transform:none}}
+.spark{position:fixed;pointer-events:none;z-index:5;font-size:22px;animation:pop 1.4s ease-out forwards}
+@keyframes pop{0%{opacity:1;transform:translate(0,0) scale(.5)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1.5) rotate(180deg)}}
+@media(max-width:420px){.card{padding:25px 17px}.wishes{gap:7px}.wishbox{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="bg"><span>💖</span><span>✨</span><span>🌸</span><span>💕</span><span>🌹</span></div>
+<main class="card">
+<section id="intro">
+<div class="logo">ML<small>LOVE</small></div>
+<div class="badge">✨ A Special Surprise For You ✨</div>
+<h1>একটা Surprise আছে! 🎁</h1>
+<p class="msg">এই ছোট্ট উপহারটা শুধু তোমার জন্য।<br>মন দিয়ে খুলে দেখো… 💗</p>
+<button onclick="openWish()">💝 Open Your Surprise</button>
+<div class="footer">Made with lots of love • ML 💕</div>
+</section>
+<section id="surprise" class="hidden">
+<div class="logo">ML<small>LOVE</small></div>
+<div class="cake">🎂</div>
+<div class="badge">🎉 HAPPY BIRTHDAY 🎉</div>
+<h1>শুভ জন্মদিন! 💖</h1>
+<div class="name">Sharmin Sultana Lipa</div>
+<div class="divider"></div>
+<p class="msg">তোমার জীবনের প্রতিটি সকাল হোক নতুন আনন্দে ভরা, প্রতিটি স্বপ্ন হোক পূরণের পথে। 🌸<br>তোমার মুখের হাসিটা যেন সবসময় এমনই সুন্দর থাকে। ✨</p>
+<div class="wishes">
+<div class="wishbox"><b>🌷</b>সুখে থেকো</div><div class="wishbox"><b>✨</b>স্বপ্ন পূরণ হোক</div>
+<div class="wishbox"><b>💫</b>সফলতা আসুক</div><div class="wishbox"><b>❤️</b>হাসি থাকুক</div>
+</div>
+<p class="quote">“আজকের দিনটা তোমার—তাই আজ শুধু হাসো, অনেক হাসো! 😊”</p>
+<div style="font-size:34px">🎈 🌹 🎂 🌹 🎈</div>
+<div class="divider"></div>
+<p class="msg"><strong>Stay blessed, stay happy & keep smiling. 💕</strong></p>
+<div class="footer">With love from ML ❤️</div>
+</section>
+</main>
+<script>
+function openWish(){
+document.getElementById('intro').classList.add('hidden');
+document.getElementById('surprise').classList.remove('hidden');
+for(let i=0;i<28;i++){setTimeout(()=>{const h=document.createElement('div');h.className='spark';h.textContent=['💖','💕','✨','🌸','🌹','⭐'][Math.floor(Math.random()*6)];h.style.left=(45+Math.random()*10)+'vw';h.style.top=(45+Math.random()*10)+'vh';h.style.setProperty('--x',(Math.random()*240-120)+'px');h.style.setProperty('--y',(Math.random()*-260-40)+'px');document.body.appendChild(h);setTimeout(()=>h.remove(),1500)},i*45)}
+}
+</script>
+</body>
+</html>
