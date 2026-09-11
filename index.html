@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Birthday Surprise 🎁</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,sans-serif;background:linear-gradient(135deg,#ffd6e7,#f5d8ff,#fff1c7);display:flex;align-items:center;justify-content:center;overflow:hidden;color:#5a2447}
+.card{width:min(92%,520px);padding:34px 24px;border-radius:30px;text-align:center;background:#ffffffd9;box-shadow:0 20px 60px #8b3f6a33;backdrop-filter:blur(8px);position:relative;z-index:2}
+h1{font-size:38px;margin:8px 0 14px}.name{font-size:27px;font-weight:800}.msg{font-size:18px;line-height:1.7}
+button{border:0;border-radius:999px;padding:15px 28px;font-size:18px;font-weight:700;background:#e94f9b;color:white;cursor:pointer;box-shadow:0 8px 25px #e94f9b55}
+.hidden{display:none}.cake{font-size:75px;animation:bounce 1.5s infinite}.heart{position:fixed;font-size:25px;animation:float 7s linear infinite;opacity:.75}
+@keyframes bounce{50%{transform:translateY(-10px)}}@keyframes float{from{transform:translateY(110vh) rotate(0);opacity:0}20%{opacity:.8}to{transform:translateY(-15vh) rotate(360deg);opacity:0}}
+.small{font-size:13px;opacity:.65;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="card">
+<div id="intro">
+<div style="font-size:52px">🎁</div>
+<h1>একটা Surprise আছে! 💖</h1>
+<p class="msg">তোমার জন্য এই ছোট্ট উপহারটা খুলে দেখো…</p>
+<button onclick="openWish()">Open Your Surprise ✨</button>
+</div>
+<div id="wish" class="hidden">
+<div class="cake">🎂</div>
+<h1>Happy Birthday! 🎉</h1>
+<div class="name">Sharmin Sultana Lipa ❤️</div>
+<p class="msg">শুভ জন্মদিন! 🌸<br>
+তোমার জীবনের প্রতিটি দিন আনন্দ, সফলতা ও সুন্দর মুহূর্তে ভরে উঠুক।<br>
+তোমার মুখের হাসিটা সবসময় এমনই থাকুক।<br><br>
+<strong>Stay blessed & keep smiling. 💕</strong></p>
+<div style="font-size:38px">🎈✨🌹✨🎈</div>
+<p class="small">Made with love 💝</p>
+</div>
+</div>
+<script>
+function openWish(){
+ document.getElementById('intro').classList.add('hidden');
+ document.getElementById('wish').classList.remove('hidden');
+ for(let i=0;i<22;i++){
+  const h=document.createElement('div');h.className='heart';h.textContent=['💖','💕','✨','🌸'][i%4];
+  h.style.left=Math.random()*100+'vw';h.style.animationDelay=Math.random()*4+'s';h.style.animationDuration=(5+Math.random()*5)+'s';
+  document.body.appendChild(h);
+ }
+}
+</script>
+</body>
+</html>
